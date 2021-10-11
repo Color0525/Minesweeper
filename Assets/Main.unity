@@ -462,12 +462,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _cellPrefab: {fileID: 4891042974943051311, guid: d858a78f535e1fa4b96467a36b4cfddc, type: 3}
   _cellLayoutGroup: {fileID: 1567864765}
-  _rows: 10
-  _columns: 10
-  _mineCount: 12
+  _rows: 5
+  _columns: 5
+  _mineCount: 4
   _gameStatusText: {fileID: 146430888}
   _timeText: {fileID: 1053147208}
   _flagCountText: {fileID: 392699382}
+  m_rankingPrefab: {fileID: 1409675116913128, guid: 40277c09f59a23b46af259d5885d08bb, type: 3}
 --- !u!4 &671369840
 Transform:
   m_ObjectHideFlags: 0
@@ -882,6 +883,54 @@ RectTransform:
   m_AnchoredPosition: {x: 50, y: -50}
   m_SizeDelta: {x: 100, y: 50}
   m_Pivot: {x: 0, y: 1}
+--- !u!1 &1382978884
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1382978886}
+  - component: {fileID: 1382978885}
+  m_Layer: 0
+  m_Name: NCMBSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1382978885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382978884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2105e3b274a35453f89279fbef307f02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  applicationKey: 
+  clientKey: 
+  usePush: 0
+  useAnalytics: 0
+  responseValidation: 0
+--- !u!4 &1382978886
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1382978884}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 307.5, y: 250, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1567864764
 GameObject:
   m_ObjectHideFlags: 0
@@ -924,7 +973,7 @@ MonoBehaviour:
   m_CellSize: {x: 50, y: 50}
   m_Spacing: {x: 0, y: 0}
   m_Constraint: 2
-  m_ConstraintCount: 10
+  m_ConstraintCount: 5
 --- !u!114 &1567864766
 MonoBehaviour:
   m_ObjectHideFlags: 0

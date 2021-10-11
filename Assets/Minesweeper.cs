@@ -16,6 +16,9 @@ public class Minesweeper : MonoBehaviour
     [SerializeField] Text _timeText = null;
     [SerializeField] Text _flagCountText = null;
 
+    /// <summary>ランキングシステムのプレハブ</summary>
+    [SerializeField] GameObject m_rankingPrefab;
+
     Cell[,] _cells;
     bool _isPlaying = false;
     public bool IsPlaying { get { return _isPlaying; } }
@@ -178,6 +181,10 @@ public class Minesweeper : MonoBehaviour
             _gameStatusText.text = "Clear";
             _gameStatusText.color = Color.green;
             _gameStatusText.gameObject.SetActive(true);
+
+            // ランキングシステムを発動させる
+            var ranking = Instantiate(m_rankingPrefab);
+            ranking.GetComponent<RankingManager>().SetScoreOfCurrentPlay(_time);
         }
     }
 
