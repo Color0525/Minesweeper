@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -52,6 +53,15 @@ public class Cell : MonoBehaviour
         }
     }
 
+    //public event Action<Cell> Opened;
+    //↓の内容を↑に省略可能
+    //Action<Cell> _opened;//デリゲート
+    //public event Action<Cell> Opened //公開イベント
+    //{
+    //    add { _opened += value; }
+    //    remove { _opened -= value; } 
+    //}
+
     private void OnValidate()
     {
         OnCellStateChanged();
@@ -103,6 +113,8 @@ public class Cell : MonoBehaviour
 
     public void BreakOrFlag()
     {
+        //Opened?.Invoke(this);
+
         Minesweeper ms = FindObjectOfType<Minesweeper>();
 
         if (Input.GetButtonUp("Fire1"))

@@ -47,7 +47,9 @@ public class Minesweeper : MonoBehaviour
         {
             for (int c = 0; c < _columns; c++)
             {
-                _cells[r, c] = Instantiate(_cellPrefab, _cellLayoutGroup.transform);
+                Cell cell = Instantiate(_cellPrefab, _cellLayoutGroup.transform);
+                _cells[r, c] = cell;
+                //cell.Opened += 開ける関数(cell);//+=であれば上書きされない//eventにしておくとAddが呼ばれ、+=しかできない
             }
         }
     }
